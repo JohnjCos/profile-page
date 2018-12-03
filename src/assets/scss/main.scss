@@ -45,6 +45,8 @@
 
 /* Basic */
 
+
+
 	body {
 		background: _palette(bg);
 
@@ -91,7 +93,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: _palette(fg-bold);
+		color: _palette(fg);
 		font-weight: _font(weight-bold);
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
@@ -798,9 +800,9 @@
 	.button {
 		@include vendor('appearance', 'none');
 		@include vendor('transition', ('background-color #{_duration(transition)} ease-in-out', 'color #{_duration(transition)} ease-in-out', 'border-color #{_duration(transition)} ease-in-out'));
-		background-color: transparent;
+		background-color: whitesmoke;
 		border-radius: _size(border-radius);
-		border: solid 3px _palette(border);
+		border: solid 3px black;
 		color: _palette(fg-bold) !important;
 		cursor: pointer;
 		display: inline-block;
@@ -931,7 +933,7 @@
 		}
 
 		h2, h3, h4, h5, h6 {
-			color: _palette(accent2, fg-bold);
+			color: _palette(accent2, fg);
 		}
 
 		h1 {
@@ -1500,4 +1502,10 @@
 	.\34 u24 {
 		width: 100%;
 	}
+}
+
+.image-thumbnail {
+	object-fit: cover;
+    max-height: 300px;
+    border: 3px solid white;
 }

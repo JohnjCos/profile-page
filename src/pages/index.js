@@ -14,9 +14,9 @@ import full02 from '../assets/images/fulls/CS-dashboard.jpg'
 import full03 from '../assets/images/fulls/podquest-dash.jpg'
 
 const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'BattleShip', description: 'a full stack app based around the game battleship using react, and node'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'CS Cards', description: 'a full stack learning app using react, and node, and spaced repition'},
-    { id: '3', src: full03, thumbnail: thumb03, caption: 'PodQuest', description: 'a full stack app that lets you find,listen, and subscribe to podcasts'},
+    { id: '1', src: full01, thumbnail: thumb01, caption: 'BattleShip', description: 'a full stack app based around the game battleship using react, and node', alt: 'a full stack app based around the game battleship using react, and node'},
+    { id: '2', src: full02, thumbnail: thumb02, caption: 'CS Cards', description: 'a full stack learning app using react, and node, and spaced repition', alt:'a full stack learning app using react, and node, and spaced repition'},
+    { id: '3', src: full03, thumbnail: thumb03, caption: 'PodQuest', description: 'a full stack app that lets you find,listen, and subscribe to podcasts', alt: 'a full stack app that lets you find,listen, and subscribe to podcasts'},
 ];
 
 class HomeIndex extends React.Component {
@@ -82,10 +82,12 @@ class HomeIndex extends React.Component {
                         <header className="major">
                             <h2>About Me</h2>
                         </header>
-                        <p> I am a software developer geared towards creating, developing<br />
-                            and maintaining clean easy to use web applications</p>
+                        <p> I am a web app developer geared towards creating, developing<br />
+                            and maintaining clean, easy to use web applications.<br/>
+                            Currently working with the MERN stack and in my free time working with vue.js and GraphQL<br/>
+                            to develop new applications.</p>
                         <ul className="actions">
-                            <li><a href="#" className="button">Learn More</a></li>
+                            <li><a href="https://www.linkedin.com/in/john-cosgrove-24052716b/" className="button">Learn More</a></li>
                         </ul>
                     </section>
 
@@ -100,7 +102,7 @@ class HomeIndex extends React.Component {
                         }))} />
 
                         <ul className="actions">
-                            <li><a href="#" className="button">Full Portfolio</a></li>
+                            <li><a href="https://github.com/JohnjCos" className="button">Full Portfolio</a></li>
                         </ul>
                     </section>
 
@@ -129,7 +131,7 @@ class HomeIndex extends React.Component {
                                     </li>
                                     <li>
                                         <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
-                                        678-
+                                        678-549-5263
                                     </li>
                                     <li>
                                         <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
