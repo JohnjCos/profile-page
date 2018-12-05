@@ -14,9 +14,18 @@ import full02 from '../assets/images/fulls/CS-dashboard.jpg'
 import full03 from '../assets/images/fulls/podquest-dash.jpg'
 
 const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'BattleShip', description: 'a full stack app based around the game battleship using react, and node', alt: 'a full stack app based around the game battleship using react, and node'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'CS Cards', description: 'a full stack learning app using react, and node, and spaced repition', alt:'a full stack learning app using react, and node, and spaced repition'},
-    { id: '3', src: full03, thumbnail: thumb03, caption: 'PodQuest', description: 'a full stack app that lets you find,listen, and subscribe to podcasts', alt: 'a full stack app that lets you find,listen, and subscribe to podcasts'},
+    { id: '1', src: full01, thumbnail: thumb01, caption: 'BattleShip', 
+        description: 'a full stack app based around the game battleship using react, and node. A link to the repo ', 
+            alt: 'a full stack app based around the game battleship using react, and node',
+                link:'https://github.com/JohnjCos/Battleship'},
+    { id: '2', src: full02, thumbnail: thumb02, caption: 'CS Cards', 
+        description: 'a full stack learning app using react, and node, and spaced repition. A link to the repo ', 
+            alt:'a full stack learning app using react, and node, and spaced repition',
+                link:'https://github.com/thinkful-ei23/Client-CS-Cards'},
+    { id: '3', src: full03, thumbnail: thumb03, caption: 'PodQuest', 
+        description: 'a full stack app that lets you find,listen, and subscribe to podcasts. Built using React and Node. A link to the repo ', 
+            alt: 'a full stack app that lets you find,listen, and subscribe to podcasts',
+                link:'https://github.com/thinkful-ei23/podquest-client'},
 ];
 
 class HomeIndex extends React.Component {
@@ -94,11 +103,12 @@ class HomeIndex extends React.Component {
                     <section id="two">
                         <h2>Recent Work</h2>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description }) => ({
+                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description, link }) => ({
                             src,
                             thumbnail,
                             caption,
-                            description
+                            description,
+                            link
                         }))} />
 
                         <ul className="actions">
