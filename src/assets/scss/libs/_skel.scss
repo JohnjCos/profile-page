@@ -454,6 +454,16 @@
 					}
 
 				// Rows.
+					.project-row{
+						border-bottom: solid 1px transparent;
+						-moz-box-sizing: border-box;
+						-webkit-box-sizing: border-box;
+						box-sizing: border-box;
+						display: grid;
+						grid-template-areas: 1fr;
+						align-items: center;
+						justify-items: center;
+					}
 					.row {
 						border-bottom: solid 1px transparent;
 						-moz-box-sizing: border-box;

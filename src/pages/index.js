@@ -5,27 +5,31 @@ import Layout from '../components/layout'
 // import Lightbox from 'react-images'
 import Gallery from '../components/Gallery'
 
-import thumb01 from '../assets/images/thumbs/battleship-game.jpg'
+import thumb01 from '../assets/images/thumbs/battleshipLanding.jpg'
 import thumb02 from '../assets/images/thumbs/CS-splash.jpg'
 import thumb03 from '../assets/images/thumbs/pod-splash.jpg'
 
-import full01 from '../assets/images/fulls/battleship-splashpage.jpg'
+import full01 from '../assets/images/fulls/battleshipBoard.jpg'
 import full02 from '../assets/images/fulls/CS-dashboard.jpg'
 import full03 from '../assets/images/fulls/podquest-dash.jpg'
 
 const DEFAULT_IMAGES = [
-    { id: '1', src: full01, thumbnail: thumb01, caption: 'BattleShip', 
-        description: 'a full stack app based around the game battleship using react, and node. A link to the repo ', 
-            alt: 'a full stack app based around the game battleship using react, and node',
-                link:'https://github.com/JohnjCos/Battleship'},
-    { id: '2', src: full02, thumbnail: thumb02, caption: 'CS Cards', 
-        description: 'a full stack learning app using react, and node, and spaced repition. A link to the repo ', 
-            alt:'a full stack learning app using react, and node, and spaced repition',
-                link:'https://github.com/thinkful-ei23/Client-CS-Cards'},
+
     { id: '3', src: full03, thumbnail: thumb03, caption: 'PodQuest', 
-        description: 'a full stack app that lets you find,listen, and subscribe to podcasts. Built using React and Node. A link to the repo ', 
-            alt: 'a full stack app that lets you find,listen, and subscribe to podcasts',
-                link:'https://github.com/thinkful-ei23/podquest-client'},
+        description: 'a  app that lets you find,listen, and subscribe to podcasts.', 
+        alt: 'a full stack app that lets you find,listen, and subscribe to podcasts',
+        stack:'built using the MERN stack as well as a XML parser',
+        repoLink:'https://github.com/thinkful-ei23/podquest-client',appLink:'https://podquest-app.herokuapp.com/'},
+    { id: '1', src: full01, thumbnail: thumb01, caption: 'BattleShip', 
+        description: 'a app that lets you play the game battleship with friends', 
+        alt: 'a full stack app based around the game battleship using react, and node',
+        stack:'Built using the MERN stack',
+        repoLink:'https://github.com/JohnjCos/Battleship',appLink: 'https://john-battleship.herokuapp.com/'},
+    { id: '2', src: full02, thumbnail: thumb02, caption: 'CS Cards', 
+        description: 'a learning app to help you learn the basic javascript definitions such as array', 
+        alt:'a full stack learning app using react, and node, and spaced repition',
+        stack:'Built using the MERN stack along with spaced repition and websockets',
+        repoLink:'https://github.com/thinkful-ei23/Client-CS-Cards',appLink:'https://client-cs-cards.herokuapp.com/'},
 ];
 
 class HomeIndex extends React.Component {
@@ -94,26 +98,22 @@ class HomeIndex extends React.Component {
                         <p> I am a web app developer geared towards creating, developing<br />
                             and maintaining clean, easy to use web applications.<br/>
                             Currently working with the MERN stack and in my free time working with vue.js and GraphQL<br/>
-                            to develop new applications.</p>
-                        <ul className="actions">
-                            <li><a href="https://www.linkedin.com/in/john-cosgrove-24052716b/" className="button">Learn More</a></li>
-                        </ul>
+                            to develop new applications. While not developing I am a pretty laid back guy who likes to <br/>
+                            hang out with friends and play video games.</p>
                     </section>
 
                     <section id="two">
                         <h2>Recent Work</h2>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description, link }) => ({
+                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description, repoLink,appLink,stack }) => ({
                             src,
                             thumbnail,
                             caption,
                             description,
-                            link
+                            appLink,
+                            repoLink,
+                            stack
                         }))} />
-
-                        <ul className="actions">
-                            <li><a href="https://github.com/JohnjCos" className="button">Full Portfolio</a></li>
-                        </ul>
                     </section>
 
                     <section id="three">
@@ -133,25 +133,19 @@ class HomeIndex extends React.Component {
                             </div>
                             <div className="4u 12u$(small)">
                                 <ul className="labeled-icons">
-                                    <li>
-                                        <h3 className="icon fa-home"><span className="label">Address</span></h3>
-                                        1815 FairOaks Pl<br />
-                                        Decatur, GA 30033<br />
-                                        United States
-                                    </li>
+                                    
+                                    <li><a href="https://github.com/JohnjCos" className="github">GitHub</a></li>
+                                    <li><a href="https://www.linkedin.com/in/john-cosgrove-24052716b/">linkedin</a></li>
+                                    <li><a href="mailto:johnjacobcosgrove@gmail.com" className="icon fa-envelope-o">
+                                    Email</a></li>
                                     <li>
                                         <h3 className="icon fa-mobile"><span className="label">Phone</span></h3>
                                         678-549-5263
-                                    </li>
-                                    <li>
-                                        <h3 className="icon fa-envelope-o"><span className="label">Email</span></h3>
-                                        <a href="mailto:johnjacobcosgrove@gmail.com">JohnJacobCosgrove@gmail.com</a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </section>
-
                 </div>
 
             </Layout>

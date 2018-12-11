@@ -53,7 +53,6 @@ class Gallery extends Component {
     }
     renderGallery () {
         const { images } = this.props;
-
         if (!images) return;
 
         const gallery = images.map((obj, i) => {
@@ -68,13 +67,18 @@ class Gallery extends Component {
                     </a>
 
                     <h3>{obj.caption}</h3>
-                    <p>{obj.description}<a href={obj.link} >here</a></p>
+                    <ul>
+                        <li>{obj.description}</li>
+                        <li>{obj.stack}</li>
+                        <li>To view the Live app click <a href={obj.appLink}>Here</a></li>
+                        <li>View the repo <a href={obj.repoLink}>Here</a></li>
+                    </ul>  
                 </article>
             );
         });
 
         return (
-            <div className="row">
+            <div className="project-row">
                 {gallery}
             </div>
         );

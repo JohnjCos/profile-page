@@ -110,6 +110,8 @@
 	}
 
 	h2 {
+		display: flex;
+		justify-content: center;
 		font-size: 1.5em;
 		line-height: 1.5em;
 	}
@@ -885,12 +887,12 @@
 		}
 
 		h3 {
-			font-size: 1em;
+			font-size: 1.5em;
 			margin: 0 0 (_size(element-margin) * 0.25) 0;
 		}
 
 		p {
-			font-size: 0.8em;
+			font-size: 1em;
 			line-height: 1.5em;
 			margin: 0;
 		}
@@ -938,20 +940,20 @@
 
 		h1 {
 			color: _palette(accent2, fg);
-			font-size: 1.35em;
+			font-size: 1.95em;
 			line-height: 1.75em;
 			margin: 0;
 		}
 
 		.image.avatar {
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 6.25em;
+			width: 9.25em;
 		}
 	}
 
 /* Footer */
 
-	#footer {
+	.footer {
 		.icons {
 			margin: (_size(element-margin) * 0.5) 0 0 0;
 
@@ -992,7 +994,8 @@
 	#main {
 		margin-left: $size-header-width;
 		max-width: 50em + $size-header-pad;
-		padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
+		padding: 
+		$size-header-pad  $size-header-pad $size-header-pad $size-header-pad;
 		width: calc(100% - #{$size-header-width});
 
 		> section {
@@ -1506,6 +1509,6 @@
 
 .image-thumbnail {
 	object-fit: cover;
-    max-height: 300px;
+	height: 350px;
     border: 3px solid white;
 }
