@@ -61,7 +61,7 @@
 	body, input, select, textarea {
 		color: _palette(fg);
 		font-family: _font(family);
-		font-size: 16pt;
+		font-size: 24px;
 		font-weight: _font(weight);
 		line-height: 1.75em;
 	}
@@ -90,6 +90,8 @@
 
 	p {
 		margin: 0 0 _size(element-margin) 0;
+		font-size: 24px;
+		display: inline-block;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -571,10 +573,6 @@
 		margin: 0 0 _size(element-margin) 0;
 		padding-left: 1em;
 
-		li {
-			padding-left: 0.5em;
-		}
-
 		&.alt {
 			list-style: none;
 			padding-left: 0;
@@ -582,6 +580,8 @@
 			li {
 				border-top: solid 2px _palette(border);
 				padding: 0.5em 0;
+				font-size: 20px;
+
 
 				&:first-child {
 					border-top: 0;
@@ -691,9 +691,11 @@
 			li {
 				line-height: 1.75em;
 				margin: 1.5em 0 0 0;
-				padding-left: 2.25em;
 				position: relative;
-
+				font-size: 24px;
+				display: flex;
+				justify-content: center;
+				
 				&:first-child {
 					margin-top: 0;
 				}
@@ -705,7 +707,6 @@
 				h3 {
 					color: _palette(fg-light);
 					left: 0;
-					position: absolute;
 					text-align: center;
 					top: 0;
 					width: 1em;
@@ -887,8 +888,34 @@
 		}
 
 		h3 {
-			font-size: 1.5em;
+			font-size: 32px;
 			margin: 0 0 (_size(element-margin) * 0.25) 0;
+		}
+
+		li{
+			font-size: 24px;
+		}
+
+		div{
+			width: 350px;
+		}
+
+		a{
+			width: 100%;
+		}
+
+		button{
+			display: flex;
+			margin-bottom: 15px;
+			justify-content: center;
+			height: 40px;
+			width: 100%;
+			font-size: 20px;
+		}
+
+		button:hover{
+			background-color: burlywood;
+			cursor: pointer;
 		}
 
 		p {
@@ -931,6 +958,7 @@
 		}
 
 		strong, b {
+			display: block;
 			color: _palette(accent2, fg-bold);
 		}
 
@@ -943,6 +971,7 @@
 			font-size: 1.95em;
 			line-height: 1.75em;
 			margin: 0;
+			display: inline-block;
 		}
 
 		.image.avatar {
@@ -1370,12 +1399,9 @@
 
 			ul {
 				&.labeled-icons {
-					li {
-						padding-left: 2em;
 
 						h3 {
 							line-height: 1.75em;
-						}
 					}
 				}
 			}

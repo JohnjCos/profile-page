@@ -69,16 +69,21 @@ class Gallery extends Component {
                     <h3>{obj.caption}</h3>
                     <ul>
                         <li>{obj.description}</li>
-                        <li>{obj.stack}</li>
-                        <li>To view the Live app click <a href={obj.appLink}>Here</a></li>
-                        <li>View the repo <a href={obj.repoLink}>Here</a></li>
-                    </ul>  
+                        <li>{obj.frontStack}</li>
+                        <li>{obj.backStack}</li>
+                    </ul>
+                    <div className ='button-container'>
+                        <a href={obj.appLink}><button className='app-button'>Live App</button></a>                    
+                    </div>
+                    <div className='button-container'>
+                        <a href={obj.repoLink}><button className='repo-button' >Repo</button></a>
+                    </div>
                 </article>
             );
         });
 
         return (
-            <div className="project-row">
+            <div className="row">
                 {gallery}
             </div>
         );

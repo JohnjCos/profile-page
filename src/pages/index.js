@@ -16,19 +16,22 @@ import full03 from '../assets/images/fulls/podquest-dash.jpg'
 const DEFAULT_IMAGES = [
 
     { id: '3', src: full03, thumbnail: thumb03, caption: 'PodQuest', 
-        description: 'a  app that lets you find,listen, and subscribe to podcasts.', 
-        alt: 'a full stack app that lets you find,listen, and subscribe to podcasts',
-        stack:'built using the MERN stack as well as a XML parser',
+        description: 'This app lets you find,listen, and subscribe to podcasts. After making a account you are able to search through a library of podcasts to find the perfect one for you', 
+        alt: 'A full stack app that lets you find,listen, and subscribe to podcasts',
+        frontStack:' React, React-Howler, React - Redux, React-Router-Dom, React-Table, Redux, Redux-Form, Redux-Thunk',
+        backStack:' Node.js, Express.js, Mongoose, Passport',
         repoLink:'https://github.com/thinkful-ei23/podquest-client',appLink:'https://podquest-app.herokuapp.com/'},
     { id: '1', src: full01, thumbnail: thumb01, caption: 'BattleShip', 
-        description: 'a app that lets you play the game battleship with friends', 
+        description: 'A app that lets you play the game battleship with friends. After making a game, you and a friend are able to find out who is the best at destroying the others ships', 
         alt: 'a full stack app based around the game battleship using react, and node',
-        stack:'Built using the MERN stack',
+        frontStack:'React, Redux, Redux-Form, Redux-Thunk',
+        backStack:'Node.js, Express.js, Mongoose, Cors',
         repoLink:'https://github.com/JohnjCos/Battleship',appLink: 'https://john-battleship.herokuapp.com/'},
     { id: '2', src: full02, thumbnail: thumb02, caption: 'CS Cards', 
-        description: 'a learning app to help you learn the basic javascript definitions such as array', 
+        description: 'A learning app to help you learn the basic javascript definitions such as arrays. In addition you are able to keep track of your progress and even chat with other people using that app', 
         alt:'a full stack learning app using react, and node, and spaced repition',
-        stack:'Built using the MERN stack along with spaced repition and websockets',
+        frontStack:'React, Redux, Redux-Form, Redux-Thunk',
+        backStack: 'Node.js, Express.js, Mongoose, JWT',
         repoLink:'https://github.com/thinkful-ei23/Client-CS-Cards',appLink:'https://client-cs-cards.herokuapp.com/'},
 ];
 
@@ -98,21 +101,25 @@ class HomeIndex extends React.Component {
                         <p> I am a web app developer geared towards creating, developing<br />
                             and maintaining clean, easy to use web applications.<br/>
                             Currently working with the MERN stack and in my free time working with vue.js and GraphQL<br/>
-                            to develop new applications. While not developing I am a pretty laid back guy who likes to <br/>
+                            to develop new applications. Would love to work with a group of people who truly enjoy what they do.<br/>
+                            I believe when people enjoy their work it generally not only makes everyone happier but also makes you<br/>
+                            work faster and smarter. While not developing I am a pretty laid back guy who likes to <br/>
                             hang out with friends and play video games.</p>
                     </section>
 
                     <section id="two">
                         <h2>Recent Work</h2>
 
-                        <Gallery images={DEFAULT_IMAGES.map(({ id, src, thumbnail, caption, description, repoLink,appLink,stack }) => ({
+                        <Gallery images={DEFAULT_IMAGES.map(({
+                            id, src, thumbnail, caption, description, repoLink,appLink,frontStack,backStack }) => ({
                             src,
                             thumbnail,
                             caption,
                             description,
                             appLink,
                             repoLink,
-                            stack
+                            frontStack,
+                            backStack
                         }))} />
                     </section>
 
@@ -122,14 +129,8 @@ class HomeIndex extends React.Component {
                             <div className="8u 12u$(small)">
                                 <form method="post" action="#">
                                     <div className="row uniform 50%">
-                                        <div className="6u 12u$(xsmall)"><input type="text" name="name" id="name" placeholder="Name" /></div>
-                                        <div className="6u 12u$(xsmall)"><input type="email" name="email" id="email" placeholder="Email" /></div>
-                                        <div className="12u"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
                                     </div>
                                 </form>
-                                <ul className="actions">
-                                    <li><input type="submit" value="Send Message" /></li>
-                                </ul>
                             </div>
                             <div className="4u 12u$(small)">
                                 <ul className="labeled-icons">
