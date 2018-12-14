@@ -100,8 +100,9 @@ class HomeIndex extends React.Component {
                         </header>
                         <p> I am a web app developer geared towards creating, developing<br />
                             and maintaining clean, easy to use web applications.<br/>
-                            Currently I am working with the MERN stack and in my free time working with vue.js and GraphQL<br/>
-                            to develop new applications. Would love to work with a group of people who truly enjoy what they do.<br/>
+                            Currently I am working with the MERN stack and in my free time <br/>
+                            working with vue.js and GraphQL to develop new applications.<br/> 
+                            Would love to work with a group of people who truly enjoy what they do.<br/>
                             I believe when people enjoy their work it generally not only makes everyone happier but also makes you<br/>
                             work faster and smarter. While not developing I am a pretty laid back guy who likes to <br/>
                             hang out with friends and play video games.</p>
