@@ -69,8 +69,8 @@ class Gallery extends Component {
                     <h3>{obj.caption}</h3>
                     <ul>
                         <li>{obj.description}</li>
-                        <li>{obj.frontStack}</li>
-                        <li>{obj.backStack}</li>
+                        <li>frontStack: {obj.frontStack}</li>
+                        <li>backStack: {obj.backStack}</li>
                     </ul>
                     <div className ='button-container'>
                         <a href={obj.appLink}><button className='app-button'>Live App</button></a>

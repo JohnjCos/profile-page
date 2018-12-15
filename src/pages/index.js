@@ -107,7 +107,7 @@ class HomeIndex extends React.Component {
                                 and maintains web applications. Clean, beautiful, and friendly design is what I do.
                                 Currently I work with the MERN stack. But in my free time,
                                 I build Vue.JS apps using GraphQL.</p>
-                                <p>I don't want a job. I want to builds apps that make someone's day better.</p>
+                                <p>I don't want a job. I want a career building apps that make someone's day better.</p>
                                 <p>When not programming, I enjoy playing games, reading books, and exercising.</p>
                         </div>
                     </section>
