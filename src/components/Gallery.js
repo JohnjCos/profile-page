@@ -73,9 +73,7 @@ class Gallery extends Component {
                         <li>{obj.backStack}</li>
                     </ul>
                     <div className ='button-container'>
-                        <a href={obj.appLink}><button className='app-button'>Live App</button></a>                    
-                    </div>
-                    <div className='button-container'>
+                        <a href={obj.appLink}><button className='app-button'>Live App</button></a>
                         <a href={obj.repoLink}><button className='repo-button' >Repo</button></a>
                     </div>
                 </article>

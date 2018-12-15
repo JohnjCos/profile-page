@@ -257,18 +257,18 @@
 				$x: '\\28' + $breakpointName + '\\29';
 			}
 
-			.\31 2u#{$x}, .\31 2u\24#{$x} { width: 100%; clear: none; margin-left: 0; }
-			.\31 1u#{$x}, .\31 1u\24#{$x} { width: 91.6666666667%; clear: none; margin-left: 0; }
-			.\31 0u#{$x}, .\31 0u\24#{$x} { width: 83.3333333333%; clear: none; margin-left: 0; }
-			.\39 u#{$x}, .\39 u\24#{$x} { width: 75%; clear: none; margin-left: 0; }
-			.\38 u#{$x}, .\38 u\24#{$x} { width: 66.6666666667%; clear: none; margin-left: 0; }
-			.\37 u#{$x}, .\37 u\24#{$x} { width: 58.3333333333%; clear: none; margin-left: 0; }
-			.\36 u#{$x}, .\36 u\24#{$x} { width: 50%; clear: none; margin-left: 0; }
-			.\35 u#{$x}, .\35 u\24#{$x} { width: 41.6666666667%; clear: none; margin-left: 0; }
-			.\34 u#{$x}, .\34 u\24#{$x} { width: 33.3333333333%; clear: none; margin-left: 0; }
-			.\33 u#{$x}, .\33 u\24#{$x} { width: 25%; clear: none; margin-left: 0; }
-			.\32 u#{$x}, .\32 u\24#{$x} { width: 16.6666666667%; clear: none; margin-left: 0; }
-			.\31 u#{$x}, .\31 u\24#{$x} { width: 8.3333333333%; clear: none; margin-left: 0; }
+			.\31 2u#{$x}, .\31 2u\24#{$x} { clear: none; margin-left: 0; }
+			.\31 1u#{$x}, .\31 1u\24#{$x} { clear: none; margin-left: 0; }
+			.\31 0u#{$x}, .\31 0u\24#{$x} { clear: none; margin-left: 0; }
+			.\39 u#{$x}, .\39 u\24#{$x} { clear: none; margin-left: 0; }
+			.\38 u#{$x}, .\38 u\24#{$x} { clear: none; margin-left: 0; }
+			.\37 u#{$x}, .\37 u\24#{$x} { clear: none; margin-left: 0; }
+			.\36 u#{$x}, .\36 u\24#{$x} { clear: none; margin-left: 0; }
+			.\35 u#{$x}, .\35 u\24#{$x} { clear: none; margin-left: 0; }
+			.\34 u#{$x}, .\34 u\24#{$x} { clear: none; margin-left: 0; }
+			.\33 u#{$x}, .\33 u\24#{$x} { clear: none; margin-left: 0; }
+			.\32 u#{$x}, .\32 u\24#{$x} { clear: none; margin-left: 0; }
+			.\31 u#{$x}, .\31 u\24#{$x} { clear: none; margin-left: 0; }
 
 			.\31 2u\24#{$x} + *,
 			.\31 1u\24#{$x} + *,
@@ -578,6 +578,8 @@
 		// Expand property?
 			@if $expandProperty {
 			    @each $vendor in $vendor-prefixes {
+					display: flex;
+					flex-wrap: wrap;
 			        #{$vendor}#{$property}: #{str-replace-all($value, '-prefix-', $vendor)};
 			    }
 			}

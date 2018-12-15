@@ -68,7 +68,6 @@
 
 	a {
 		@include vendor('transition', ('color #{_duration(transition)} ease-in-out', 'border-color #{_duration(transition)} ease-in-out'));
-		border-bottom: dotted 1px;
 		color: _palette(accent1, bg);
 		text-decoration: none;
 
@@ -90,9 +89,12 @@
 
 	p {
 		line-height: 1.5;
-		margin: 0 0 _size(element-margin) 0;
+		margin: 0 0 1em 0;
 		font-size: 24px;
 		display: inline-block;
+		@media screen and (max-width: 600px) {
+			font-size: 18px;
+		}
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -452,6 +454,7 @@
 /* Image */
 
 	.image {
+		margin: 0 60px;
 		border-radius: _size(border-radius);
 		border: 0;
 		display: inline-block;
@@ -468,6 +471,7 @@
 			opacity: 0.5;
 			position: absolute;
 			top: 0;
+			height: 100%;
 			width: 100%;
 		}
 
@@ -536,10 +540,10 @@
 		&.fit {
 			display: block;
 			margin: 0 0 _size(element-margin) 0;
-			width: 100%;
+			max-width: 100%;
 
 			img {
-				width: 100%;
+				max-width: 100%;
 			}
 		}
 
@@ -551,8 +555,21 @@
 			}
 
 			img {
+				margin: 0 60px;
 				border-radius: 100%;
+				max-width: 100%;
+				height: 300px;
+				width: 300px;
+				object-fit: cover;
+				@media screen and (max-width: 600px) {
+					width: 200px;
+					height: 200px;
+				}
+			}
+			@media screen and (max-width:600px){
 				width: 100%;
+				display: flex;
+				justify-content: center;
 			}
 		}
 	}
@@ -895,23 +912,31 @@
 
 		li{
 			font-size: 24px;
+			@media screen and (max-width: 600px) {
+				font-size: 18px;
+			}
 		}
 
-		div{
-			width: 350px;
-		}
-
-		a{
+		.button-container {
 			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			button {
+				margin-right: 10px;
+			}
 		}
+
 
 		button{
 			display: flex;
 			margin-bottom: 15px;
 			justify-content: center;
-			height: 40px;
-			width: 100%;
+			height: 48px;
+			width: 350px;
 			font-size: 20px;
+			text-transform: uppercase;
 		}
 
 		button:hover{
@@ -934,19 +959,15 @@
 		@include vendor('align-items', 'flex-end');
 		@include vendor('justify-content', 'space-between');
 		background-color:		_palette(accent2, bg);
-		background-attachment:	scroll,								fixed;
 		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
-		background-position:	top left,							top left;
-		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								auto 100%;
+		background-attachment: scroll;
+		background-size: cover;
+		background-position: center;
 		color: _palette(accent2, fg);
-		height: 100%;
-		left: 0;
-		padding: ($size-header-pad * 2) $size-header-pad;
-		position: fixed;
-		text-align: right;
-		top: 0;
-		width: $size-header-width;
+		padding-top:2em;
+		padding-bottom: 1em;
+
+
 
 		> * {
 			@include vendor('flex-shrink', '0');
@@ -956,6 +977,14 @@
 		> .inner {
 			@include vendor('flex-grow', '1');
 			margin: 0 0 ($size-header-pad * 0.5) 0;
+			text-align: center;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			@media screen and (max-width: 600px){
+				flex-direction: column;
+			}
 		}
 
 		strong, b {
@@ -977,7 +1006,6 @@
 
 		.image.avatar {
 			margin: 0 0 (_size(element-margin) * 0.5) 0;
-			width: 9.25em;
 		}
 	}
 
@@ -1022,11 +1050,13 @@
 /* Main */
 
 	#main {
-		margin-left: $size-header-width;
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right:auto;
 		max-width: 50em + $size-header-pad;
 		padding: 
 		$size-header-pad  $size-header-pad $size-header-pad $size-header-pad;
-		width: calc(100% - #{$size-header-width});
 
 		> section {
 			border-top: solid 2px _palette(border);
@@ -1369,15 +1399,15 @@
 		/* Basic */
 
 			h1 {
-				font-size: 1.5em;
+				font-size: 2.5em;
 			}
 
 			h2 {
-				font-size: 1.2em;
+				font-size: 2.2em;
 			}
 
 			h3 {
-				font-size: 1em;
+				font-size: 2em;
 			}
 
 		/* Section/Article */
@@ -1390,9 +1420,7 @@
 
 			header {
 				&.major {
-					h2 {
-						font-size: 1.35em;
-					}
+					text-align: center;
 				}
 			}
 
@@ -1498,7 +1526,7 @@
 		/* Header */
 
 			#header {
-				padding: ($size-header-pad * 3) $size-header-pad;
+				padding: 0;
 
 				h1 {
 					br {
@@ -1536,6 +1564,75 @@
 
 .image-thumbnail {
 	object-fit: cover;
-	height: 350px;
-    border: 3px solid white;
+	width: 1600px;
+	height: 700px;
+	max-width: 100%;
+	max-height: 100%;
+	border: 3px solid white;
+	@media screen and (max-width: 800px) {
+		height: 350px;
+	}
+}
+
+#header .header-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: calc(100% - 500px);
+	min-width: fit-content;
+	text-align: center;
+	background-color: rgba(0,0,0,0.3);
+	h1, h2, h3, h4, h5, h6 {
+		color: white;
+	}
+	h2 {
+		font-size: 48px;
+		line-height: 48px;
+		margin-bottom: 12px;
+		opacity: 1;
+	}
+	h3, h4 {
+		opacity: 0.8;
+	}
+	h3 {
+		font-size: 40px;
+		line-height: 40px;
+		margin-bottom: 10px;
+	}
+	h4 {
+		font-size: 36px;
+		line-height: 36px;
+		margin-bottom: 8px;
+	}
+
+	@media screen and (max-width: 600px) {
+		.skills {
+			display: none;
+		}
+	}
+}
+
+.labeled-icons {
+	display: grid;
+	list-style: none;
+	text-decoration: none;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 20px;
+	font-size: 24px;
+	@media screen and (max-width: 600px) {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 18px;
+		.fa {
+			margin-bottom: 24px;
+		}
+	}
+}
+
+.fa, .fa a, .fa a:link {
+	color: white;
+	text-decoration: none;
 }
