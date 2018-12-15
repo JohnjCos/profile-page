@@ -117,7 +117,7 @@
 	h2 {
 		display: flex;
 		justify-content: center;
-		font-size: 1.5em;
+		font-size: 2.2em;
 		line-height: 1.5em;
 	}
 
@@ -1304,7 +1304,6 @@
 			#main {
 				max-width: none;
 				padding: ($size-header-pad * 2) $size-header-pad $size-header-pad $size-header-pad;
-				width: calc(100% - #{$size-header-width});
 			}
 
 	}
