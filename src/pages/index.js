@@ -107,8 +107,16 @@ class HomeIndex extends React.Component {
                                 and maintains web applications. Clean, beautiful, and friendly design is what I do.
                                 Currently I work with the MERN stack. But in my free time,
                                 I build Vue.JS apps using GraphQL.</p>
-                                <p>I don't want a job. I want a career building apps that make someone's day better.</p>
-                                <p>When not programming, I enjoy playing games, reading books, and exercising.</p>
+                            <p>While not programming, I enjoy playing games, reading books,
+                                and exercising. From table top games to video games I enjoy them all.
+                            </p>
+                            <p>
+                                When playing with others I love to see the same passion for the game. 
+                                The same can be said for developing. I believe developers that love what they do show
+                                it not only in the quality of their work, but
+                                the enjoyment others get out of it. Down below you can view some of the projects I have done either
+                                in a group or by myself.
+                            </p>
                         </div>
                     </section>
 
