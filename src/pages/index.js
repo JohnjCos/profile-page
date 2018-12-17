@@ -112,7 +112,7 @@ class HomeIndex extends React.Component {
                             <p>
                                 When playing with others I love to see the same passion for the game. 
                                 The same can be said for developing. I believe developers that love what they do show
-                                it not only in the quality of their work, but
+                                it in the quality of their work and
                                 the enjoyment others get out of it. Down below you can view some of the projects I have done either
                                 in a group or by myself.
                             </p>
