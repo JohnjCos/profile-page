@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, {
+    Component
+} from 'react';
 import Lightbox from 'react-images';
 
 class Gallery extends Component {
-    constructor () {
+    constructor() {
         super();
 
         this.state = {
@@ -18,89 +20,139 @@ class Gallery extends Component {
         this.handleClickImage = this.handleClickImage.bind(this);
         this.openLightbox = this.openLightbox.bind(this);
     }
-    openLightbox (index, event) {
+    openLightbox(index, event) {
         event.preventDefault();
         this.setState({
             currentImage: index,
             lightboxIsOpen: true,
         });
     }
-    closeLightbox () {
+    closeLightbox() {
         this.setState({
             currentImage: 0,
             lightboxIsOpen: false,
         });
     }
-    gotoPrevious () {
+    gotoPrevious() {
         this.setState({
             currentImage: this.state.currentImage - 1,
         });
     }
-    gotoNext () {
+    gotoNext() {
         this.setState({
             currentImage: this.state.currentImage + 1,
         });
     }
-    gotoImage (index) {
+    gotoImage(index) {
         this.setState({
             currentImage: index,
         });
     }
-    handleClickImage () {
+    handleClickImage() {
         if (this.state.currentImage === this.props.images.length - 1) return;
 
         this.gotoNext();
     }
-    renderGallery () {
-        const { images } = this.props;
+    renderGallery() {
+        const {
+            images
+        } = this.props;
         if (!images) return;
 
         const gallery = images.map((obj, i) => {
-            return (
-                <article className="6u 12u$(xsmall) work-item" key={i}>
-                    <a
-                        className="image fit thumb"
-                        href={obj.src}
-                        onClick={(e) => this.openLightbox(i, e)}
-                    >
-                        <img className="image-thumbnail" src={obj.thumbnail} alt={obj.alt}/>
-                    </a>
+            return ( <
+                article className = "6u 12u$(xsmall) work-item"
+                key = {
+                    i
+                } >
+                <
+                a className = "image fit thumb"
+                href = {
+                    obj.src
+                }
+                onClick = {
+                    (e) => this.openLightbox(i, e)
+                } >
+                <
+                img className = "image-thumbnail"
+                src = {
+                    obj.thumbnail
+                }
+                alt = {
+                    obj.alt
+                }
+                /> <
+                /a>
 
-                    <h3>{obj.caption}</h3>
-                    <ul>
-                        <li>{obj.description}</li>
-                        <li>frontStack: {obj.frontStack}</li>
-                        <li>backStack: {obj.backStack}</li>
-                    </ul>
-                    <div className ='button-container'>
-                        <a href={obj.appLink}><button className='app-button'>Live App</button></a>
-                        <a href={obj.repoLink}><button className='repo-button' >Repo</button></a>
-                    </div>
-                </article>
+                <
+                h3 > {
+                    obj.caption
+                } < /h3> <
+                ul >
+                <
+                li > {
+                    obj.description
+                } < /li> <
+                li > frontEnd: {
+                    obj.frontStack
+                } < /li> <
+                li > backEnd: {
+                    obj.backStack
+                } < /li> <
+                /ul> <
+                div className = 'button-container' >
+                <
+                a href = {
+                    obj.appLink
+                } > < button className = 'app-button' > Live App < /button></a >
+                <
+                a href = {
+                    obj.repoLink
+                } > < button className = 'repo-button' > Repo < /button></a >
+                <
+                /div> <
+                /article>
             );
         });
 
-        return (
-            <div className="row">
-                {gallery}
-            </div>
+        return ( <
+            div className = "row" > {
+                gallery
+            } <
+            /div>
         );
     }
-    render () {
-        return (
-            <div>
-                {this.renderGallery()}
-                <Lightbox
-                    currentImage={this.state.currentImage}
-                    images={this.props.images}
-                    isOpen={this.state.lightboxIsOpen}
-                    onClickImage={this.handleClickImage}
-                    onClickNext={this.gotoNext}
-                    onClickPrev={this.gotoPrevious}
-                    onClickThumbnail={this.gotoImage}
-                    onClose={this.closeLightbox}
-                />
-            </div>
+    render() {
+        return ( <
+            div > {
+                this.renderGallery()
+            } <
+            Lightbox currentImage = {
+                this.state.currentImage
+            }
+            images = {
+                this.props.images
+            }
+            isOpen = {
+                this.state.lightboxIsOpen
+            }
+            onClickImage = {
+                this.handleClickImage
+            }
+            onClickNext = {
+                this.gotoNext
+            }
+            onClickPrev = {
+                this.gotoPrevious
+            }
+            onClickThumbnail = {
+                this.gotoImage
+            }
+            onClose = {
+                this.closeLightbox
+            }
+            /> <
+            /div>
         );
     }
 }
