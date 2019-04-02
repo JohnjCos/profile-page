@@ -1704,6 +1704,7 @@ body.is-touch {
 .fa a,
 .fa a:link {
 	text-decoration: none;
+	height: 25px;
 
 	@media screen and (min-width: 801px) {
 		width: 200px;
