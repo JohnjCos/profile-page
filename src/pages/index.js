@@ -129,8 +129,8 @@ class HomeIndex extends React.Component {
             content = {
                 siteDescription
             }
-            /> <
-            /Helmet> <
+            /> < /
+            Helmet > <
             section id = "three" >
             <
             h2 > Get In Touch < /h2> <
@@ -143,37 +143,41 @@ class HomeIndex extends React.Component {
             <
             div className = "row uniform 50%" >
             <
+            /div> < /
+            form > <
             /div> <
-            /form> <
-            /div> <
-            div className = "4u 12u$(small)" >
+            div className = "flex" >
             <
             div className = "labeled-icons" >
 
             <
-            div className = "fa" > < a href = "https://github.com/JohnjCos" > < FontAwesomeIcon icon = {
+            div className = "fa" > < a href = "https://github.com/JohnjCos" > < FontAwesomeIcon size = "lg"
+            icon = {
                 faGithub
             }
             />&nbsp;GitHub</a > < /div> <
-            div className = "fa" > < a href = "https://www.linkedin.com/in/john-cosgrove-24052716b/" > < FontAwesomeIcon icon = {
+            div className = "fa" > < a href = "https://www.linkedin.com/in/john-cosgrove-24052716b/" > < FontAwesomeIcon size = "lg"
+            icon = {
                 faLinkedin
             }
             />&nbsp;LinkedIn</a > < /div> <
-            div className = "fa" > < a href = "mailto:johnjacobcosgrove@gmail.com" > < FontAwesomeIcon icon = {
+            div className = "fa" > < a href = "mailto:johnjacobcosgrove@gmail.com" > < FontAwesomeIcon size = "lg"
+            icon = {
                 faEnvelope
             }
             />&nbsp;
             Email < /a></div >
             <
-            div className = "fa" > < FontAwesomeIcon icon = {
+            div className = "fa" > < FontAwesomeIcon size = "lg"
+            icon = {
                 faPhone
             }
             />&nbsp;
             678 - 549 - 5263 <
-            /div> <
-            /div> <
-            /div> <
-            /div> <
+            /div> < /
+            div > <
+            /div> < /
+            div > <
             /section> <
             div id = "main" >
             <
@@ -181,8 +185,8 @@ class HomeIndex extends React.Component {
             <
             header className = "major" >
             <
-            h2 > About Me < /h2> <
-            /header> <
+            h2 > About Me < /h2> < /
+            header > <
             div >
             <
             p > My favorite thing about programming is the sense of acomplishment I get when writing apps.I think its amazing to be able to make your application and see it working exactly how you envisioned it. <
@@ -195,8 +199,8 @@ class HomeIndex extends React.Component {
             for the game.The same can be said
             for developing.I believe developers that love what they do show
             it in the quality of their work and the enjoyment others get out of it.Down below you can view some of the projects I have done either in a group or by myself. <
-            /p> <
-            /div> <
+            /p> < /
+            div > <
             /section>
 
             <
@@ -227,8 +231,8 @@ class HomeIndex extends React.Component {
                     backStack
                 }))
             }
-            /> <
-            /section>
+            /> < /
+            section >
 
 
             <

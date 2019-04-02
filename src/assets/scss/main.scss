@@ -1706,16 +1706,25 @@ body.is-touch {
 }
 
 #three {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
   background-color: #eef5f7;
   padding-bottom: 1em;
 
   h2 {
     font-size: 32px;
+  }
+
+  .flex {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media screen and (min-height: 1024px) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
 }
 
@@ -1725,6 +1734,11 @@ body.is-touch {
   text-decoration: none;
   height: 48px;
   max-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  flex: 1fr;
+  padding-left: 1em;
+  padding-right: 1em;
 
   svg {
     height: 48px;
@@ -1732,7 +1746,6 @@ body.is-touch {
   }
 
   @media screen and (min-width: 801px) {
-    width: 200px;
     height: 48px;
   }
 }
