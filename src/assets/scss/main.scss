@@ -1717,6 +1717,7 @@ body.is-touch {
     display: flex;
     width: 100%;
     justify-content: center;
+    align-content: center;
   }
 
   @media screen and (min-height: 1024px) {
@@ -1736,6 +1737,7 @@ body.is-touch {
   max-height: 48px;
   display: inline-flex;
   align-items: center;
+  justify-items: center;
   flex: 1fr;
   padding-left: 1em;
   padding-right: 1em;
