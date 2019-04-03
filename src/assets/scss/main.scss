@@ -1729,6 +1729,13 @@ body.is-touch {
   }
 }
 
+.fa:hover,
+.fa:hover a,
+.fa:hover svg,
+.fa:hover {
+  color: dodgerblue !important;
+}
+
 .fa,
 .fa a,
 .fa a:link {
