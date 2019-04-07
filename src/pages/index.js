@@ -20,6 +20,19 @@ import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 const DEFAULT_IMAGES = [
   {
+    id: '4',
+    src: thumb04,
+    thumbnail: thumb04,
+    caption: 'Calorie Counter',
+    description:
+      'A App showcasing React hooks and enabling a user to count their calories throughout their day',
+    alt:
+      'a Calorie Counter App that lets you input calories and add it to your total',
+    frontStack: 'React',
+    repoLink: 'https://github.com/JohnjCos/Hooks',
+    appLink: 'https://hooks-calorie-counter.herokuapp.com/',
+  },
+  {
     id: '3',
     src: full03,
     thumbnail: thumb03,
@@ -35,20 +48,6 @@ const DEFAULT_IMAGES = [
     appLink: 'https://podquest-app.herokuapp.com/',
   },
   {
-    id: '1',
-    src: full01,
-    thumbnail: thumb01,
-    caption: 'BattleShip',
-    description:
-      'A app that lets you play the game battleship with friends. After making a game, you and a friend are able to find out who is the best at outthinking the other',
-    alt:
-      'a full stack app based around the game battleship using react, and node',
-    frontStack: 'React, Redux, Redux-Form, Redux-Thunk',
-    backStack: 'Node.js, Express.js, Mongoose, Cors',
-    repoLink: 'https://github.com/JohnjCos/Battleship',
-    appLink: 'https://john-battleship.herokuapp.com/',
-  },
-  {
     id: '2',
     src: full02,
     thumbnail: thumb02,
@@ -62,17 +61,18 @@ const DEFAULT_IMAGES = [
     appLink: 'https://client-cs-cards.herokuapp.com/',
   },
   {
-    id: '4',
-    src: thumb04,
-    thumbnail: thumb04,
-    caption: 'Calorie Counter',
+    id: '1',
+    src: full01,
+    thumbnail: thumb01,
+    caption: 'BattleShip',
     description:
-      'A App showcasing React hooks and enabling a user to count their calories throughout their day',
+      'A app that lets you play the game battleship with friends. After making a game, you and a friend are able to find out who is the best at outthinking the other',
     alt:
-      'a Calorie Counter App that lets you input calories and add it to your total',
-    frontStack: 'React',
-    repoLink: 'https://github.com/JohnjCos/Hooks',
-    appLink: 'https://hooks-calorie-counter.herokuapp.com/',
+      'a full stack app based around the game battleship using react, and node',
+    frontStack: 'React, Redux, Redux-Form, Redux-Thunk',
+    backStack: 'Node.js, Express.js, Mongoose, Cors',
+    repoLink: 'https://github.com/JohnjCos/Battleship',
+    appLink: 'https://john-battleship.herokuapp.com/',
   },
 ]
 
