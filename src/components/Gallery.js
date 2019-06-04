@@ -56,6 +56,19 @@ class Gallery extends Component {
     if (!images) return
 
     const gallery = images.map((obj, i) => {
+      let repo
+      if (obj.repoLink) {
+        repo = (
+          <a href={obj.repoLink}>
+            {' '}
+            <button className="repo-button"> Repo </button>
+          </a>
+        )
+      }
+      let backStack
+      if (obj.backStack) {
+        backStack = <li> backEnd: {obj.backStack} </li>
+      }
       return (
         <article className="6u 12u$(xsmall) work-item" key={i}>
           <a
@@ -72,17 +85,14 @@ class Gallery extends Component {
           <h3> {obj.caption} </h3>{' '}
           <ul>
             <li> {obj.description} </li> <li> frontEnd: {obj.frontStack} </li>{' '}
-            <li> backEnd: {obj.backStack} </li>{' '}
+            {backStack}{' '}
           </ul>{' '}
           <div className="button-container">
             <a href={obj.appLink}>
               {' '}
               <button className="app-button"> Live App </button>
             </a>
-            <a href={obj.repoLink}>
-              {' '}
-              <button className="repo-button"> Repo </button>
-            </a>
+            {repo}
           </div>{' '}
         </article>
       )

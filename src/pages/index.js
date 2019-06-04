@@ -9,16 +9,30 @@ import thumb01 from '../assets/images/thumbs/battleshipLanding.jpg'
 import thumb02 from '../assets/images/thumbs/CS-splash.jpg'
 import thumb03 from '../assets/images/thumbs/pod-splash.jpg'
 import thumb04 from '../assets/images/thumbs/hooks.png'
+import thumb05 from '../assets/images/thumbs/autofitWorkout.png'
 
 import full01 from '../assets/images/fulls/battleshipBoard.jpg'
 import full02 from '../assets/images/fulls/CS-dashboard.jpg'
 import full03 from '../assets/images/fulls/podquest-dash.jpg'
+import full05 from '../assets/images/fulls/autofit.png'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 
 const DEFAULT_IMAGES = [
+  {
+    id: '5',
+    src: full05,
+    thumbnail: thumb05,
+    caption: 'AutoFit',
+    description:
+      'A hybrid mobile application that focuses on being able to track your exercises while being able to add new workout routines',
+    alt: 'a fitness application that lets you add and track workout routines',
+    frontStack: 'Ionic, Angular',
+    repoLink: '',
+    appLink: 'https://hooks-calorie-counter.herokuapp.com/',
+  },
   {
     id: '4',
     src: thumb04,
